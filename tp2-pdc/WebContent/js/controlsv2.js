@@ -30,6 +30,7 @@ function modal(){
 
 function crear_productos() {
 	console.log("crear_productos...");
+	$('#isection-producto').hide();
 	
 	if (localStorage.productos == undefined) {
 		console.log("no estan los datos");
@@ -183,15 +184,15 @@ function crear_productos() {
 	var categoria;
 	for(var j = 0; j < 3; j++){
 		
-		if(j == 0){
-			categoria = data["bebidas"];
+		if(j == 0){					
+			categoria = data["bebidas"];			
 			tipoItem = 'bebidas';
 		}
-		if(j == 1) {
+		if(j == 1) {			
 			categoria = data["pizzas"]
 			tipoItem = 'pizzas';
 		}
-		if(j == 2){
+		if(j == 2){			
 			categoria = data["hamburguesas"]
 			tipoItem = 'hamburguesas';
 		}
@@ -255,7 +256,7 @@ function detallesProducto(tag){
 	console.log("tag:" + tag);
 	modal();
 	$('#isection-producto').focus();
-	
+	$('#isection-producto').show();
 	var nombre = $(tag).find(".nombre").text();
 	var descripcion = $(tag).find(".descripcion").html();
 	var precio = $(tag).find(".precio").html();
@@ -915,6 +916,10 @@ function ObjectLength( object ) {
     return length;
 };
 
+function mostrarCategoria(cat){
+	console.log("cat: " + cat);
+	$(cat).click();
+}
 
 
 

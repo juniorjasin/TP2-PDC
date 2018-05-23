@@ -83,7 +83,7 @@
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="#" class="logo"> <img src="images/icons/logo-01.png"
+					<a href="#" class="logo"> <img src="images/icons/logo-velociraptor.png"
 						alt="IMG-LOGO">
 					</a>
 
@@ -134,7 +134,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="index.html"> <img src="images/icons/logo-01.png"
+				<a href="#"> <img src="images/icons/logo-velociraptor.png"
 					alt="IMG-LOGO">
 				</a>
 			</div>

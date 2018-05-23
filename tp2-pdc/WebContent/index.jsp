@@ -49,8 +49,8 @@
 	href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="css/util.css">
-<link rel="stylesheet" type="text/css" href="css/mainv1.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/mainv3.css">
+<link rel="stylesheet" type="text/css" href="css/stylev2.css">
 <!--===============================================================================================-->
 
 
@@ -96,7 +96,6 @@
 									<li><a href="home-02.html">Homepage 2</a></li>
 									<li><a href="home-03.html">Homepage 3</a></li>icon-header-noti
 								</ul></li>
-
 							<li><a href="product.html">Shop</a></li>
 
 							<li class="label1" data-label1="hot"><a
@@ -302,7 +301,7 @@
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1"
-					style="background-image: url(images/slide-01.jpg);">
+					style="background-image: url(images/menu/c4.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
@@ -328,7 +327,7 @@
 				</div>
 
 				<div class="item-slick1"
-					style="background-image: url(images/slide-02.jpg);">
+					style="background-image: url(images/menu/c7.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
@@ -353,7 +352,7 @@
 				</div>
 
 				<div class="item-slick1"
-					style="background-image: url(images/slide-03.jpg);">
+					style="background-image: url(images/menu/c6.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
@@ -389,7 +388,7 @@
 	<!-- ************************************************************************************* -->
 	<!-- ************************************************************************************* -->
 
-	<section class="bg0 p-t-23 p-b-140 section-producto">
+	<section id="isection-producto" class="bg0 p-t-23 p-b-140 section-producto">
 		<div class="container">
 			<div class="row">
 				<div id="iproducto"></div>
@@ -407,7 +406,7 @@
 	<!-- ************************************************************************************* -->
 	<!-- ************************************************************************************* -->
 
-	<section class="bg0 p-t-23 p-b-140 section-menu">
+	<section id="isection-menu" class="bg0 p-t-23 p-b-140 section-menu">
 		<div class="container">
 
 			<div class="row">

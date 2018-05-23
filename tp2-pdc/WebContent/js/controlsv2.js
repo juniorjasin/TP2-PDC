@@ -97,14 +97,14 @@ function crear_productos() {
 
 	        "id" : 9,
 	        "nombre" : "Queso y pepperoni",
-	        "desc" : "Por encima de las rebanadas picantes del pepperoni, lleva una capa de queso derretido a la que nadie puede negarse.",
+	        "desc" : "Rebanadas picantes del pepperoni y capa de queso derretido a la que nadie puede negarse.",
 	        "precio" : 190.00,
 	        "src_imagen" : "./images/menu/quesopepperoni.jpeg"
 	    },{
 
 	        "id" : 10,
 	        "nombre" : "Pizza de pollo",
-	        "desc" : "No es tan conocida como otras pizzas. Seguro que a muchos les encantará este sabor con pollo y salsa barbacoa",
+	        "desc" : "Seguro que a muchos les encantará este sabor con pollo y salsa barbacoa",
 	        "precio" : 200.00,
 	        "src_imagen" : "./images/menu/pizzapollo.jpeg"
 	    },{
@@ -148,10 +148,10 @@ function crear_productos() {
 	    },{
 
 	        "id" : 16,
-	        "nombre" : "Jalapeño Bacon Cheeseburger",
-	        "desc" : "Esta hamburguesa combina medio kilo de carne, queso derretido, jalapeños, tomates, lechuga y tocino empanizado y frito hasta que quede dorado.",
+	        "nombre" : "Jalapeno Bacon Cheeseburger",
+	        "desc" : "Medio kilo de carne, queso derretido, jalapeños, tomates, lechuga y tocino empanizado y frito.",
 	        "precio" : 175.00,
-	        "src_imagen" : "./images/menu/jalapeñobaconcheeseburger.jpg"
+	        "src_imagen" : "./images/menu/baconcheeseburger.jpg"
 	    },{
 
 	        "id" : 17,
@@ -254,6 +254,7 @@ function detallesProducto(tag){
 	console.log("detallesProducto(tag)");
 	console.log("tag:" + tag);
 	modal();
+	$('#isection-producto').focus();
 	
 	var nombre = $(tag).find(".nombre").text();
 	var descripcion = $(tag).find(".descripcion").html();
@@ -310,6 +311,7 @@ function add(id) {
 	console.log("id:" + id);
 	var selector = '#item-' + id;
 	console.log("selector:" + selector);
+	modal();
 	
 /*//	var nombre = $(tag).closest("tr").find("td:eq(0)").html();
 //	var descripcion = $(tag).closest("tr").find("td:eq(1)").html();
@@ -422,6 +424,7 @@ function eliminar(tag) {
 	var id = $(tag).closest("div").find("[name=identificador]").val();
 	console.log("eliminar por id: "+ id);
 	sessionStorage.removeItem(id);
+	modal();
 
 	var jsonCarrito = JSON.parse(localStorage.getItem("carrito"));
 	var nuevoCarrito = jsonCarrito.filter(function(el) {
@@ -465,6 +468,7 @@ function volver_carrito(){
 
 function visualizar_carrito() {
 	console.log("visualizar_carrito");
+	
 	$.ajax({
 		url : "http://localhost:8080/tp2-pdc/ResumenSessionServlet",
 		type : "get",
@@ -489,6 +493,22 @@ function visualizar_carrito() {
 			$("#formulario").hide();
 			$("#carrito").show();
 			$("#carrito").html(html);
+			
+			console.log('JSON.parse(localStorage.getItem("carrito")).length:' + JSON.parse(localStorage.getItem("carrito")).length);
+			
+			if (localStorage.getItem("carrito") == null || JSON.parse(localStorage.getItem("carrito")).length == 0) {
+				console.log('visualizar if');
+				$('#ifinalizar-compra').prop('disabled', true);
+				$('#ifinalizar-compra').removeClass('btn-primary');
+				$('#ifinalizar-compra').addClass('button-disabled');
+
+			}else{
+				console.log('visualizar else');
+			$('#ifinalizar-compra').addClass('btn-primary');
+			$('#ifinalizar-compra').removeClass('button-disabled');
+			$('#ifinalizar-compra').prop('disabled', false);
+			}
+			
 		}
 	});
 }
@@ -534,21 +554,31 @@ function eliminar_product_carrito(tag) {
 					console.log("success");
 					// console.log(html);
 					//valor = valor.replace('$', '');
-				var selectorTotalProducto = "#total-producto-"+id;
-				var total_producto = $(tag).closest("tr").find(selectorTotalProducto).html();
-				total_producto = parseFloat(total_producto.replace('$', ''));
-				var total = parseFloat($("#total").html());
-				console.log("total_producto: " + total_producto);
-				console.log("total: " + total);
-				$("#total").html(total - total_producto);
-				$(tag).closest("tr").remove();
+					var selectorTotalProducto = "#total-producto-"+id;
+					var total_producto = $(tag).closest("tr").find(selectorTotalProducto).html();
+					total_producto = parseFloat(total_producto.replace('$', ''));
+					var total = parseFloat($("#total").html());
+					console.log("total_producto: " + total_producto);
+					console.log("total: " + total);
+					$("#total").html(total - total_producto);
+					$(tag).closest("tr").remove();
+					
+					console.log('JSON.parse(localStorage.getItem("carrito")).length:' + JSON.parse(localStorage.getItem("carrito")).length);
+					
+					if (localStorage.getItem("carrito") == null || JSON.parse(localStorage.getItem("carrito")).length == 0) {
+						console.log('eliminar_product_carrito IF');
+						$('#ifinalizar-compra').prop('disabled', true);
+						$('#ifinalizar-compra').removeClass('btn-primary');
+						$('#ifinalizar-compra').addClass('button-disabled');
+					}
+				
 				}
 			});
 }
 
 function confirmarCompra() {
 	console.log("confirmarCompra");
-
+	
 	$.ajax({
 		url : "http://localhost:8080/tp2-pdc/FinalizarCompraServlet",
 		type : "get",
@@ -576,7 +606,7 @@ function confirmarCompra() {
 
 function procesarCompra(evt) {
 	evt.preventDefault();
-
+	
 	// eliminar sessionStorate
 	sessionStorage.clear();
 
@@ -662,6 +692,8 @@ function sumar(){
 function buscarProducto(){
 	console.log("buscarProducto()");
 	//console.log("$(#i-search).val():" + $("#i-search").val());
+	modal();
+	
 	
 	var buscar = $("#i-search").val().toLowerCase();
 	console.log("buscar:" + buscar);
@@ -780,10 +812,10 @@ function buscarProducto(){
     },{
 
         "id" : 16,
-        "nombre" : "Jalapeño Bacon Cheeseburger",
+        "nombre" : "Jalapeno Bacon Cheeseburger",
         "desc" : "Esta hamburguesa combina medio kilo de carne, queso derretido, jalapeños, tomates, lechuga y tocino empanizado y frito hasta que quede dorado.",
         "precio" : 175.00,
-        "src_imagen" : "./images/menu/jalapeñobaconcheeseburger.jpg"
+        "src_imagen" : "./images/menu/baconcheeseburger.jpg"
     },{
 
         "id" : 17,
@@ -867,6 +899,9 @@ function buscarProducto(){
 	//console.log("coincidencias[0].id: "+coincidencias);
 	//console.log("elementos_encontrados: " + elementos_encontrados);
 	$(".section-menu").html(elementos_encontrados);
+	$("section #isection-menu").focus();
+	
+	setTimeout(function() { $('#isection-menu').focus() }, 3000);
 }
 
 function ObjectLength( object ) {

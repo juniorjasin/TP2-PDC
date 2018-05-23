@@ -31,6 +31,18 @@
 
 .bd-example-modal-lg .modal-dialog .modal-content {
 	background-color: transparent;
-	color:#ffc107;
+	color: #ffc107;
 	border: none;
+}
+
+.descripcion {
+	line-height: 1.45;
+	font-family: "sans serif";
+	font-weight: 400;
+}
+
+.button-disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }

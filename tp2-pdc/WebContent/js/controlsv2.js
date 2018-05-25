@@ -30,7 +30,7 @@ function modal(){
 
 function crear_productos() {
 	console.log("crear_productos...");
-	$('#isection-producto').hide();
+	//$('#isection-producto').hide();
 	
 	if (localStorage.productos == undefined) {
 		console.log("no estan los datos");
@@ -256,7 +256,7 @@ function detallesProducto(tag){
 	console.log("tag:" + tag);
 	modal();
 	$('#isection-producto').focus();
-	$('#isection-producto').show();
+	//$('#isection-producto').show();
 	var nombre = $(tag).find(".nombre").text();
 	var descripcion = $(tag).find(".descripcion").html();
 	var precio = $(tag).find(".precio").html();
@@ -295,14 +295,13 @@ function detallesProducto(tag){
 			
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();	
+			//$(".footer").hide();	
 			
 			
 			//$("#grilla").hide();
 			//$("#resumen").show();
-			$("#iproducto").show();
-			$("#iproducto").html(html);
-			
+			$("#iproducto").show();			
+			$("#iproducto").html(html);			
 		}
 	});
 }
@@ -489,13 +488,12 @@ function visualizar_carrito() {
 			console.log("seccess");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#formulario").hide();
+			$("#carrito").focus();
 			$("#carrito").show();
-			$("#carrito").html(html);
-			
-			console.log('JSON.parse(localStorage.getItem("carrito")).length:' + JSON.parse(localStorage.getItem("carrito")).length);
+			$("#carrito").html(html);				
 			
 			if (localStorage.getItem("carrito") == null || JSON.parse(localStorage.getItem("carrito")).length == 0) {
 				console.log('visualizar if');

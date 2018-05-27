@@ -275,7 +275,7 @@ function detallesProducto(tag){
 		error : function(hr) {
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#carrito").hide();
 			$("#formulario").hide();
@@ -288,7 +288,7 @@ function detallesProducto(tag){
 			
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();	
+			//$(".footer").hide();	
 			
 			
 			//$("#grilla").hide();
@@ -385,7 +385,7 @@ function add(id) {
 			console.log("error");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#carrito").hide();
 			$("#formulario").hide();
@@ -438,7 +438,7 @@ function eliminar(tag) {
 			console.log("error");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#carrito").hide();
 			$("#formulario").hide();
@@ -471,7 +471,7 @@ function visualizar_carrito() {
 			console.log("error");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#carrito").hide();
 			$("#formulario").hide();
@@ -482,7 +482,7 @@ function visualizar_carrito() {
 			console.log("seccess");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#formulario").hide();
 			$("#carrito").show();
@@ -537,7 +537,7 @@ function eliminar_product_carrito(tag) {
 					console.log("error");
 					$(".section-slide").hide();
 					$(".section-menu").hide();
-					$(".footer").hide();
+					//$(".footer").hide();
 					$("#iproducto").hide();
 					$("#carrito").hide();
 					$("#formulario").hide();
@@ -581,7 +581,7 @@ function confirmarCompra() {
 			console.log("error");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			$(".footer").hide();
+			//$(".footer").hide();
 			$("#iproducto").hide();
 			$("#carrito").hide();
 			$("#formulario").hide();
@@ -626,7 +626,7 @@ function procesarCompra(evt) {
 				console.log("error");
 				$(".section-slide").hide();
 				$(".section-menu").hide();
-				$(".footer").hide();
+				//$(".footer").hide();
 				$("#iproducto").hide();
 				$("#carrito").hide();
 				$("#formulario").hide();
@@ -651,7 +651,7 @@ function procesarCompra(evt) {
 				console.log("error");
 				$(".section-slide").hide();
 				$(".section-menu").hide();
-				$(".footer").hide();
+				//$(".footer").hide();
 				$("#iproducto").hide();
 				$("#carrito").hide();
 				$("#formulario").hide();

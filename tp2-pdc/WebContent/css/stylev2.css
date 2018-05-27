@@ -81,6 +81,7 @@
 
 #carrito{
 	background-color: #FFF;
+	margin-bottom: 15em;
 }
 
 .finalizar-compra-container{
@@ -110,7 +111,7 @@
 
 /* FIN RESUMEN DEL CARRITO */
 
-
+/* INICIO SECCION MENU */
 .section-menu {
 	padding-top: 8em;
 }
@@ -282,6 +283,7 @@ hr {
 
 .section-form{
 	margin-top: 3em;
+	margin-bottom: 15em;
 }
 
 #formulario{
@@ -326,4 +328,10 @@ input[type=checkbox] {
 }
 
 /* FIN ID FORMULARIO FINAL */
+
+
+/* INICIO FOOTER */
+
+
+/* FIN FOOTER */
 

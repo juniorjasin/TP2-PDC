@@ -107,9 +107,10 @@ SECCION MENU - SECCION MENU - SECCION MENU - SECCION MENU - SECCION
 	border-top: 1px solid #ccc;
     border-radius: 25px;
     
-	height: 30%;
+	height: 33%;
 	
 	transition: all 0.3s ease-in-out;
+	overflow: auto;
 }
 
 .menu-item:hover {
@@ -117,7 +118,7 @@ SECCION MENU - SECCION MENU - SECCION MENU - SECCION MENU - SECCION
 }
 
 .menu-item img {
-	width: 200px;
+	width: 36%;
 	height: 100%;
 	
 	border-top: 1px solid #ccc;
@@ -323,7 +324,7 @@ SECCION PRODUCTO - SECCION PRODUCTO - SECCION PRODUCTO - SECCION PROD
 
 /* Me hacen invisible a los items del menu  */
 .site-animate {
-	margin-bottom: 30px
+	margin-bottom: 5em;
 	/* opacity: 0; */
 	/* visibility: hidden; */
 	

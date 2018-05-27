@@ -69,7 +69,7 @@
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="#" class="logo"> <img
+					<a href="index.jsp" class="logo"> <img
 						src="images/icons/logo-johnny-rockets.png" class="resto-logo" alt="IMG-LOGO">
 					</a>
 
@@ -77,7 +77,7 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu"><a href="index.jsp">HOME</a>
-							<li><a href="#">CONTACT</a></li>
+							<li><a href="#ifooter">CONTACT</a></li>
 						</ul>
 					</div>
 
@@ -92,11 +92,6 @@
 							class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 js-show-cart">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
-
-						<a href="#"
-							class="dis-block icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
-						</a>
 					</div>
 				</nav>
 			</div>
@@ -123,10 +118,6 @@
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
-				<a href="#"
-					class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
-					data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
-				</a>
 			</div>
 
 			<!-- Button show menu -->
@@ -140,8 +131,8 @@
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
-				<li><a href="index.jsp">HOME</a>
-				<li><a href="#">CONTACT</a></li>
+				<li class="active-menu"><a href="index.jsp">HOME</a></li>						
++				<li><a href="#ifooter">CONTACT</a></li>
 			</ul>
 		</div>
 
@@ -327,8 +318,7 @@
 	<!-- ************************************************************************************* -->
 	<!-- ************************************************************************************* -->
 
-	<section id="isection-producto"
-		class="bg0 p-t-23 section-producto">
+	<section id="isection-producto" class="bg0 p-t-23 section-producto">
 			<div id="iproducto"></div>
 	</section>
 
@@ -399,123 +389,6 @@
 			</div>
 		</div>
 	</section>
-
-
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- *********************************** Footer ********************************************* -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-
-
-	<footer class="bg3 p-t-75 p-b-32 footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">Categories</h4>
-
-					<ul>
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Women </a></li>
-
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Men </a></li>
-
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Shoes </a></li>
-
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Watches </a></li>
-					</ul>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">Help</h4>
-
-					<ul>
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Track Order </a></li>
-
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Returns </a></li>
-
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> Shipping </a></li>
-
-						<li class="p-b-10"><a href="#"
-							class="stext-107 cl7 hov-cl1 trans-04"> FAQs </a></li>
-					</ul>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">GET IN TOUCH</h4>
-
-					<p class="stext-107 cl7 size-201">Any questions? Let us know in
-						store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
-						on (+1) 96 716 6879</p>
-
-					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
-							class="fa fa-facebook"></i>
-						</a> <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
-							class="fa fa-instagram"></i>
-						</a> <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
-							class="fa fa-pinterest-p"></i>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">Newsletter</h4>
-
-					<form>
-						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text"
-								name="email" placeholder="email@example.com">
-							<div class="focus-input1 trans-04"></div>
-						</div>
-
-						<div class="p-t-18">
-							<button
-								class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Subscribe</button>
-						</div>
-					</form>
-				</div>
-			</div>
-
-			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1"> <img
-						src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a> <a href="#" class="m-all-1"> <img
-						src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a> <a href="#" class="m-all-1"> <img
-						src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a> <a href="#" class="m-all-1"> <img
-						src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a> <a href="#" class="m-all-1"> <img
-						src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
-
-				<p class="stext-107 cl6 txt-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;
-					<script>
-						document.write(new Date().getFullYear());
-					</script>
-					All rights reserved | This template is made with <i
-						class="fa fa-heart-o" aria-hidden="true"></i> by <a
-						href="https://colorlib.com" target="_blank">Colorlib</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-				</p>
-			</div>
-		</div>
-	</footer>
 
 
 	<!-- Back to top -->
@@ -812,6 +685,90 @@
 	<script type="text/javascript">
 		crear_productos()
 	</script>
+
+
+
+	<!-- **************************************************************************************** -->
+	<!-- **************************************************************************************** -->
+	<!-- **************************************************************************************** -->
+	<!-- *********************************** Footer ********************************************* -->
+	<!-- **************************************************************************************** -->
+	<!-- **************************************************************************************** -->
+	<!-- **************************************************************************************** -->
+
+
+	<footer  id="ifooter" class="bg3 p-t-75 p-b-32 footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">Categories</h4>
+
+					<ul>
+						<li class="p-b-10"><a href="#isection-menu" onclick="mostrarCategoria('#pills-breakfast-tab')"
+							class="stext-107 cl7 hov-cl1 trans-04"> Hamburguesas </a></li>
+
+						<li class="p-b-10"><a href="#isection-menu" onclick="mostrarCategoria('#pills-lunch-tab')"
+							class="stext-107 cl7 hov-cl1 trans-04"> Pizzas </a></li>
+							
+						<li class="p-b-10"><a href="#isection-menu" onclick="mostrarCategoria('#pills-dinner-tab')"
+							class="stext-107 cl7 hov-cl1 trans-04"> Bebidas </a></li>
+					</ul>
+				</div>
+
+
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">Johnny Rockets</h4>
+
+					<p class="stext-107 cl7 size-201">Somos la mejor opcion para
+						aquellos que buscan una excelente atencion y comida de alta calidad.
+						Comunicate con nosotros por cualquier consulta.</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
+							class="fa fa-facebook"></i>
+						</a> <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
+							class="fa fa-instagram"></i>
+						</a> <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
+							class="fa fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1"> <img
+						src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a> <a href="#" class="m-all-1"> <img
+						src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a> <a href="#" class="m-all-1"> <img
+						src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a> <a href="#" class="m-all-1"> <img
+						src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a> <a href="#" class="m-all-1"> <img
+						src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
+
+				<p class="stext-107 cl6 txt-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+					All rights reserved | This template is made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> by <a
+						href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+				</p>
+			</div>
+		</div>
+	</footer>
+
+
 
 </body>
 </html>

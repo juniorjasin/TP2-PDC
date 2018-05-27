@@ -77,16 +77,17 @@ public class InfoProductoServlet extends HttpServlet {
 			 * "<a href=\"index.jsp\">Volver</a>");
 			 */
 
-			out.println("<div id=item-" + id + " class=\"item\">\n"
-					+ "<input type=\"hidden\" name=\"identificador\" value=" + id + ">" + "</br>" + "</br>" + "</br>"
-					+ "            <div class=\"media d-block mb-4 text-center site-media site-animate border-0\">\n"
-					+ "              <img class=\"src_imagen img-fluid\" style=\"max-width:100%; height:auto;\" src="
+			out.println(" <div id=item-" + id + " class=\"item\">\n"
+					+ "<input type=\"hidden\" name=\"identificador\" value=" + id + ">"
+					+ "            <div class=\"d-md-block media mb-4 text-center site-media site-animate  info-item\">\n"
+					+ "              <img class=\"src_imagen img-fluid imagen-producto\" style=\"max-width:100%; height:auto;\" src="
 					+ src_imagen + " alt=\"Free Template by colorlib.com\" class=\"img-fluid\">\n"
-					+ "              <div class=\"media-body p-md-5 p-4 \">\n" + " <h5 class=\"mt-0 h4 nombre\">" + nom
-					+ "</h5>" + "                <h5 class=\"text-primary precio\">" + valor + "</h5>\n"
-					+ "<p class=\"mb-4 descripcion\">" + desc + "</p>\n" + "\n"
-					+ "								<div class=\"flex-w flex-r-m p-b-10\">\n"
-					+ "									<div class=\"size-204 flex-w flex-m respon6-next\">\n"
+					+ "<h5 class=\"mt-0 h4 nombre\">" + nom + "<span class=\"text-primary price-item\"><h5 class=\"precio\">" + valor
+					+ "</h5></span> </h5>" + "<p class=\"mb-4 descripcion\">" + desc + "</p>\n" + "\n"
+					+ "								<div class=\"flex-w add-to-cart\">\n"
+					+ "									<div class=\"d-block flex-w flex-m respon6-next\">\n"
+					+ "<div class=\"add-cantidad\"> "
+					+ "<div class=\"cantidad\"> <h5 class=\"mt-0 h5 texto-cantidad\"> Cantidad </h5> </div>"
 					+ "										<div class=\"wrap-num-product flex-w m-r-20 m-tb-10\">\n"
 					+ "											<div class=\"btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m\" onclick=\"restar()\">\n"
 					+ "												<i class=\"fs-16 zmdi zmdi-minus\"></i>\n"
@@ -96,12 +97,14 @@ public class InfoProductoServlet extends HttpServlet {
 					+ "											<div class=\"btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m\" onclick=\"sumar()\">\n"
 					+ "												<i class=\"fs-16 zmdi zmdi-plus\"></i>\n"
 					+ "											</div>\n"
-					+ "										</div>\n" + "\n"
-					+ "										<button class=\"flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail\" onclick=\"add("
-					+ id + ")\">\n	Add to cart\n" + "										</button>\n"
+					+ "										</div>" + "</div>"
+					+ "<hr/>"
+					+ "<button class=\"col-sm-1 flex-c-m stext-101 cl0 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail btn-add\" onclick=\"add("
+					+ id + ")\">\n	A&ntilde;adir al carrito\n </button>\n"
 					+ "									</div>\n" + "								</div>"
-					+ "</div></div></div>"
-					+ "<a type=\"button\" class=\"col-sm-1 col-md-3 btn btn-warning\" href=\"index.jsp\">Volver</a>");
+					// + "<a type=\"button\" class=\"col-sm-1 col-md-3 btn btn-warning volver\"
+					// href=\"index.jsp\">Volver</a>"
+					+ "</div>");
 
 		}
 	}

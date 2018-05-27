@@ -52,7 +52,8 @@
 <link rel="stylesheet" type="text/css" href="css/mainv3.css">
 <link rel="stylesheet" type="text/css" href="css/stylev2.css">
 <!--===============================================================================================-->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
 
 </head>
 
@@ -63,34 +64,39 @@
 	<!-- Header -->
 	<header>
 		<!-- Header desktop -->
-		<div class="container-menu-desktop">			
+		<div class="container-menu-desktop">
 			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="#" class="logo"> <img src="images/icons/logo-velociraptor.png"
-						alt="IMG-LOGO">
+					<a href="#" class="logo"> <img
+						src="images/icons/logo-johnny-rockets.png" class="resto-logo" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu"><a href="index.jsp">Home</a></li>						
-							<li><a href="#ifooter">Contact</a></li>
+							<li class="active-menu"><a href="index.jsp">HOME</a>
+							<li><a href="#">CONTACT</a></li>
 						</ul>
 					</div>
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
 						<div
-							class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+							class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
 						<div
-							class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-cart">
+							class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 js-show-cart">
 							<i class="zmdi zmdi-shopping-cart"></i>
-						</div>						
+						</div>
+
+						<a href="#"
+							class="dis-block icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+							data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
+						</a>
 					</div>
 				</nav>
 			</div>
@@ -100,7 +106,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="#"> <img src="images/icons/logo-velociraptor.png"
+				<a href="#"> <img src="images/icons/logo-johnny-rockets.png"
 					alt="IMG-LOGO">
 				</a>
 			</div>
@@ -108,14 +114,19 @@
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
 				<div
-					class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+					class="icon-header-item hov-cl1 trans-04 p-r-11 js-show-modal-search">
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
 				<div
-					class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
+					class="icon-header-item hov-cl1 trans-04 p-r-11 p-l-10 js-show-cart">
 					<i class="zmdi zmdi-shopping-cart"></i>
-				</div>			
+				</div>
+
+				<a href="#"
+					class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
+					data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
+				</a>
 			</div>
 
 			<!-- Button show menu -->
@@ -129,8 +140,8 @@
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
-				<li class="active-menu"><a href="index.jsp">Home</a></li>						
-				<li><a href="#ifooter">Contact</a></li>
+				<li><a href="index.jsp">HOME</a>
+				<li><a href="#">CONTACT</a></li>
 			</ul>
 		</div>
 
@@ -143,7 +154,8 @@
 					<img src="images/icons/icon-close2.png" alt="CLOSE">
 				</button>
 
-				<form class="wrap-search-header flex-w p-l-15" action="javascript:void(null)" onsubmit="buscarProducto();">
+				<form class="wrap-search-header flex-w p-l-15"
+					action="javascript:void(null)" onsubmit="buscarProducto();">
 					<button class="flex-c-m trans-04">
 						<i class="zmdi zmdi-search"></i>
 					</button>
@@ -234,19 +246,20 @@
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
 								data-appear="fadeInDown" data-delay="0">
-								<span class="ltext-101 cl0 respon2"> Variedades de hamburguesas </span>
+								<span class="ltext-101 cl0 respon2"> Variedades de
+									hamburguesas </span>
 							</div>
 
 							<div class="layer-slick1 animated visible-false"
 								data-appear="fadeInUp" data-delay="800">
-								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">Raptor-Bar
-								</h2>
+								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">Johnny Rocket</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false"
 								data-appear="zoomIn" data-delay="1600">
-								<a href="#pills-breakfast-tab" onclick="mostrarCategoria('#pills-breakfast-tab')"
-									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="#isection-menu"
+									onclick="mostrarCategoria('#pills-breakfast-tab')"
+									class="flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04">
 									Ver Hamburguesas </a>
 							</div>
 						</div>
@@ -259,18 +272,20 @@
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
 								data-appear="rollIn" data-delay="0">
-								<span class="ltext-101 cl0 respon2"> Variedades de pizzas </span>
+								<span class="ltext-101 cl0 respon2"> Variedades de pizzas
+								</span>
 							</div>
 
 							<div class="layer-slick1 animated visible-false"
 								data-appear="lightSpeedIn" data-delay="800">
-								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">Raptor-Bar</h2>
+								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">Johnny Rocket</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false"
 								data-appear="slideInUp" data-delay="1600">
-								<a href="#pills-lunch-tab" onclick="mostrarCategoria('#pills-lunch-tab')"
-									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="#isection-menu"
+									onclick="mostrarCategoria('#pills-lunch-tab')"
+									class="flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04">
 									Ver Pizzas </a>
 							</div>
 						</div>
@@ -283,19 +298,18 @@
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
 								data-appear="rotateInDownLeft" data-delay="0">
-								<span class="ltext-101 cl0 respon2"> Bienvenido a
-								</span>
+								<span class="ltext-101 cl0 respon2"> Bienvenido a </span>
 							</div>
 
 							<div class="layer-slick1 animated visible-false"
 								data-appear="rotateInUpRight" data-delay="800">
-								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">Raptor-Bar</h2>
+								<h2 class="ltext-201 cl0 p-t-19 p-b-43 respon1">Johnny Rocket</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false"
 								data-appear="rotateIn" data-delay="1600">
-								<a href="#isection-menu-categorias"
-									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="#isection-menu"
+									class="flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04">
 									Ver Menu </a>
 							</div>
 						</div>
@@ -313,12 +327,9 @@
 	<!-- ************************************************************************************* -->
 	<!-- ************************************************************************************* -->
 
-	<section id="isection-producto" class="bg0 p-t-23 p-b-140 section-producto">
-		<div class="container">
-			<div class="row">
-				<div id="iproducto"></div>
-			</div>
-		</div>
+	<section id="isection-producto"
+		class="bg0 p-t-23 section-producto">
+			<div id="iproducto"></div>
 	</section>
 
 
@@ -338,12 +349,13 @@
 				<div class="col-md-12 text-center">
 
 
-					<ul id="isection-menu-categorias" class="nav site-tab-nav nav-pills mb-5" id="pills-tab"
+					<ul id="isection-menu-categorias"
+						class="nav site-tab-nav nav-pills mb-5" id="pills-tab"
 						role="tablist">
 
-						<li id="icatHamburguesas" class="nav-item site-animate"><a class="nav-link active"
-							id="pills-breakfast-tab" data-toggle="pill"
-							href="#pills-breakfast" role="tab"
+						<li id="icatHamburguesas" class="nav-item site-animate"><a
+							class="nav-link active" id="pills-breakfast-tab"
+							data-toggle="pill" href="#pills-breakfast" role="tab"
 							aria-controls="pills-breakfast" aria-selected="true">Hamburguesas</a>
 						</li>
 
@@ -388,26 +400,7 @@
 		</div>
 	</section>
 
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- *********************************** CARRITO ********************************************* -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	
-	<div id="carrito" class="container"></div>
-	
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- *********************************** FORMULARIO ********************************************* -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	<!-- **************************************************************************************** -->
-	
-	<div id="formulario" class="container"></div>
-	
+
 	<!-- **************************************************************************************** -->
 	<!-- **************************************************************************************** -->
 	<!-- **************************************************************************************** -->
@@ -417,30 +410,51 @@
 	<!-- **************************************************************************************** -->
 
 
-	<footer id="ifooter" class="bg3 p-t-75 p-b-32 footer">
+	<footer class="bg3 p-t-75 p-b-32 footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">Categories</h4>
 
 					<ul>
-						<li class="p-b-10"><a href="#pills-breakfast-tab" onclick="mostrarCategoria('#pills-breakfast-tab')"
-							class="stext-107 cl7 hov-cl1 trans-04"> Hamburguesas </a></li>
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Women </a></li>
 
-						<li class="p-b-10"><a href="#pills-lunch-tab" onclick="mostrarCategoria('#pills-lunch-tab')"
-							class="stext-107 cl7 hov-cl1 trans-04"> Pizzas </a></li>
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Men </a></li>
 
-						<li class="p-b-10"><a href="#pills-dinner-tab" onclick="mostrarCategoria('#pills-dinner-tab')"
-							class="stext-107 cl7 hov-cl1 trans-04"> Bebidas </a></li>					
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Shoes </a></li>
+
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Watches </a></li>
 					</ul>
-				</div>				
+				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">RAPTOR-BAR</h4>
+					<h4 class="stext-301 cl0 p-b-30">Help</h4>
 
-					<p class="stext-107 cl7 size-201">Somos la mejor opcion para
-					aquellos que buscan una excelente atencion y comida de alta calidad.
-					Comunicate con nosotros por cualquier consulta.</p>
+					<ul>
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Track Order </a></li>
+
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Returns </a></li>
+
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> Shipping </a></li>
+
+						<li class="p-b-10"><a href="#"
+							class="stext-107 cl7 hov-cl1 trans-04"> FAQs </a></li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">GET IN TOUCH</h4>
+
+					<p class="stext-107 cl7 size-201">Any questions? Let us know in
+						store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						on (+1) 96 716 6879</p>
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
@@ -451,6 +465,24 @@
 							class="fa fa-pinterest-p"></i>
 						</a>
 					</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">Newsletter</h4>
+
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text"
+								name="email" placeholder="email@example.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
+
+						<div class="p-t-18">
+							<button
+								class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								Subscribe</button>
+						</div>
+					</form>
 				</div>
 			</div>
 
@@ -474,7 +506,12 @@
 					Copyright &copy;
 					<script>
 						document.write(new Date().getFullYear());
-					</script>					
+					</script>
+					All rights reserved | This template is made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> by <a
+						href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
 				</p>
 			</div>
 		</div>
@@ -754,12 +791,13 @@
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/mainv2.js"></script>
-	<div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1">
-	    <div class="modal-dialog modal-sm">
-	        <div class="modal-content" style="width: 48px">
-	            <span class="fa fa-spinner fa-spin fa-3x"></span>
-	        </div>
-	    </div>
+	<div class="modal fade bd-example-modal-lg" data-backdrop="static"
+		data-keyboard="false" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content" style="width: 48px">
+				<span class="fa fa-spinner fa-spin fa-3x"></span>
+			</div>
+		</div>
 	</div>
 
 	<!-- <div id="grilla">
@@ -767,7 +805,9 @@
 	</div>
 	<script type="text/javascript">
 		crear_productos()
-	</script> -->		
+	</script> -->
+	<div id="carrito" class="container"></div>
+	<div id="formulario" class="container"></div>
 	<div id="error" class="container"></div>
 	<script type="text/javascript">
 		crear_productos()

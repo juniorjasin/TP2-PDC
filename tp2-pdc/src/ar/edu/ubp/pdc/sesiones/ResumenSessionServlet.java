@@ -37,11 +37,14 @@ public class ResumenSessionServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 
 		out.println("<div class=\"wrap-table-shopping-cart\">\n" + "    <table class=\"table-shopping-cart\">\n"
-				+ "        <tr class=\"table_head\">\n" + "            <th class=\"column-1\">Product</th>\n"
-				+ "            <th class=\"column-2\"></th>\n" + "            <th class=\"column-3\">Price</th>\n"
-				+ "            <th class=\"column-4\">Quantity</th>\n"
-				+ "            <th class=\"column-5\">Total</th>\n" + "            <th class=\"column-6\"></th>\n"
-				+ "        </tr>");
+				+ "<a href=\"index.jsp\" class=\"volver-a-comprar volver\">"
+				+ "<i class=\"fa fa-arrow-left flecha-volver\"></i> Volver a comprar</a>"
+				+ "        <tr class=\"table_head\">\n" + "            "
+				+ "            <th class=\"column-1\">Product0</th>\n"
+				+ "            <th class=\"column-2\">Precio</th>\n"
+				+ "            <th class=\"column-3\">Cantidad</th>\n"
+				+ "            <th class=\"column-4\">Total</th>\n"
+				+ "            <th class=\"column-5\">Eliminar</th>\n" + "        </tr>");
 		float total = 0;
 		String attrName;
 		Enumeration<String> attrNames = session.getAttributeNames();
@@ -49,16 +52,16 @@ public class ResumenSessionServlet extends HttpServlet {
 			attrName = attrNames.nextElement();
 			Producto miproducto = (Producto) session.getAttribute(attrName);
 
-			out.println("        <tr class=\"table_row\">\n" + "            <td class=\"column-1\">\n"
-					+ "<input type=\"hidden\" name=\"hAttrName\" value=" + miproducto.getId() + ">"
-					+ "                <div class=\"how-itemcart1\">\n" + "                    <img src="
-					+ miproducto.getSrc_imagen() + " alt=\"IMG\">\n" + "                </div>\n"
-					+ "            </td>\n" + "            <td class=\"column-2\">" + miproducto.getNombre() + "</td>\n"
-					+ "            <td class=\"column-3\">$" + miproducto.getPrecio() + "</td>\n"
-					+ "            <td class=\"column-4\">" + miproducto.getCantidad() + "</td>\n"
-					+ "            <td class=\"column-5\" id=\"total-producto-" + miproducto.getId() + "\">$"
+			out.println("<tr class=\"table_row\">\n" + "            <td class=\"column-1\">\n"
+					+ "              <input type=\"hidden\" name=\"hAttrName\" value=" + miproducto.getId() + ">"
+					+ "              <div class=\"how-itemcart1\">\n" + "<img class=\"resume-image\"src="
+					+ miproducto.getSrc_imagen() + " alt=\"IMG\"> </div>"
+					+ "              <span class=\"product-name\">" + miproducto.getNombre() + "</span>"
+					+ "            </td>" + "            <td class=\"column-2\">$" + miproducto.getPrecio() + "</td>\n"
+					+ "            <td class=\"column-3\">" + miproducto.getCantidad() + "</td>\n"
+					+ "            <td class=\"column-4\" id=\"total-producto-" + miproducto.getId() + "\">$"
 					+ miproducto.getCantidad() * miproducto.getPrecio() + "</td>\n"
-					+ "<td class=\"column-6\"><button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar_product_carrito(this)><span aria-hidden=\"true\">&times;</span></button></td></tr>");
+					+ "<td class=\"column-5\"><button type=\"button\" class=\"close btn-close color-red\" aria-label=\"Close\" onclick=eliminar_product_carrito(this)><span class=\"close-icon\" aria-hidden=\"true\">&times;</span></button></td></tr>");
 
 			/*
 			 * out.println("<tr>"); out.println("<td>");
@@ -76,11 +79,14 @@ public class ResumenSessionServlet extends HttpServlet {
 		}
 		out.println("</table>");
 		out.println("</div>");
-		out.println("<h1>Total: <h1 id=\"total\">" + total + "</h1></h1>");
-		out.println("<a href=\"index.jsp\">Volver a comprar</a>");
 		out.println(
-				"<button onclick=\"confirmarCompra()\" id=\"ifinalizar-compra\" class=\"btn btn-primary\">Finalizar compra</button>");
-		out.println("<br></br>");
+				"<div class=\"total-container\"> <span class=\"total total-text d-inline-block\">Total </span><span class=\"d-inline-block total-number total\"id=\"total\"> "
+						+ total + "</span> </div>");
+		out.println("<div class=\"finalizar-compra-container\">"
+				+ "<a onclick=\"confirmarCompra()\" id=\"ifinalizar-compra\" "
+				+ "class=\"btn-finalizar-compra flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04\">Finalizar compra</a>"
+				+ "<div>");
+
 		out.close();
 	}
 

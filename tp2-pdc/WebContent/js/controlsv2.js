@@ -20,17 +20,10 @@ jQuery(document).ready(
 			});
 		});
 
-function modal(){
-    $('.modal').modal('show');
-    setTimeout(function () {
-    	console.log('hejsan');
-    	$('.modal').modal('hide');
-    }, 1000);
- }
 
 function crear_productos() {
 	console.log("crear_productos...");
-	//$('#isection-producto').hide();
+	$('#isection-producto').hide();
 	
 	if (localStorage.productos == undefined) {
 		console.log("no estan los datos");
@@ -220,7 +213,7 @@ function crear_productos() {
 								"<p class=\"descripcion\">" + categoria[i].desc + "</p>" +
 								"<h6 class=\"text-primary menu-price precio\">$"+ categoria[i].precio +"</h6>" +
 							"</div>" +
-							"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span aria-hidden=\"true\">&times;</span></button>" +
+							"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span class=\"close-icon\"aria-hidden=\"true\">&times;</span></button>" +
 						"</div>" );
 				
 
@@ -256,7 +249,7 @@ function detallesProducto(tag){
 	console.log("tag:" + tag);
 	modal();
 	$('#isection-producto').focus();
-	//$('#isection-producto').show();
+	$('#isection-producto').show();
 	var nombre = $(tag).find(".nombre").text();
 	var descripcion = $(tag).find(".descripcion").html();
 	var precio = $(tag).find(".precio").html();
@@ -295,13 +288,14 @@ function detallesProducto(tag){
 			
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			//$(".footer").hide();	
+			$(".footer").hide();	
 			
 			
 			//$("#grilla").hide();
 			//$("#resumen").show();
-			$("#iproducto").show();			
-			$("#iproducto").html(html);			
+			$("#iproducto").show();
+			$("#iproducto").html(html);
+			
 		}
 	});
 }
@@ -326,7 +320,7 @@ function add(id) {
 	
 	
 	var id = $(selector).find("[name=identificador]").val();
-	var nombre = $(selector).find(".nombre").html();
+	var nombre = $(selector).find(".nombre").clone().children().remove().end().text();
 	var descripcion = $(selector).find(".descripcion").html();
 	var valor = $(selector).find(".precio").html();
 	valor = valor.replace('$', '');
@@ -488,12 +482,13 @@ function visualizar_carrito() {
 			console.log("seccess");
 			$(".section-slide").hide();
 			$(".section-menu").hide();
-			//$(".footer").hide();
+			$(".footer").hide();
 			$("#iproducto").hide();
 			$("#formulario").hide();
-			$("#carrito").focus();
 			$("#carrito").show();
-			$("#carrito").html(html);				
+			$("#carrito").html(html);
+			
+			console.log('JSON.parse(localStorage.getItem("carrito")).length:' + JSON.parse(localStorage.getItem("carrito")).length);
 			
 			if (localStorage.getItem("carrito") == null || JSON.parse(localStorage.getItem("carrito")).length == 0) {
 				console.log('visualizar if');
@@ -920,6 +915,14 @@ function mostrarCategoria(cat){
 }
 
 
+function modal(){
+    $('.modal').modal('show');
+    setTimeout(function () {
+    	console.log('hejsan');
+    	$('.modal').modal('hide');
+    }, 1000);
+ }
+
 
 function sleep(milliseconds) {
 	  var start = new Date().getTime();
@@ -929,11 +932,6 @@ function sleep(milliseconds) {
 	    }
 	  }
 }
-
-
-
-
-
 
 
 

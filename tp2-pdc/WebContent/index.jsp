@@ -101,7 +101,7 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="#"> <img src="images/icons/logo-johnny-rockets.png"
+				<a href="index.jsp"> <img src="images/icons/logo-johnny-rockets.png"
 					alt="IMG-LOGO">
 				</a>
 			</div>

@@ -862,7 +862,7 @@ function buscarProducto(){
 				
 		
 				if (carrito != null && filtrado.length > 0){
-					elementos_encontrados += "<div id=\"item-" + arrayProductos[j].id + "-menu\" class=\"media menu-item\"> " +
+					elementos_encontrados += "<div id=\"item-" + arrayProductos[j].id + "-menu\" class=\"media menu-item-busqueda\"> " +
 					"<input type= \"hidden\" name=\"identificador\" value="+ arrayProductos[j].id + ">" +
 						"<img class=\"mr-3\" src=" + arrayProductos[j].src_imagen +" class=\"img-fluid\" alt=\"Free Template by colorlib.com\">" +
 						"<div class=\"media-body\">" +
@@ -870,10 +870,10 @@ function buscarProducto(){
 							"<p>" + arrayProductos[j].desc + "</p>" +
 							"<h6 class=\"text-primary menu-price\">$"+ arrayProductos[j].precio +"</h6>" +
 						"</div>" +
-						"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span aria-hidden=\"true\">&times;</span></button>" +
+						"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span class=\"close-icon\" aria-hidden=\"true\">&times;</span></button>" +
 					"</div>";
 				}else{
-					elementos_encontrados += "<div id=\"item-" + arrayProductos[j].id + "-menu\" class=\"media menu-item\" onclick=\"detallesProducto(this)\"> " +
+					elementos_encontrados += "<div id=\"item-" + arrayProductos[j].id + "-menu\" class=\"media menu-item-busqueda\" onclick=\"detallesProducto(this)\"> " +
 					"<input type= \"hidden\" name=\"identificador\" value="+ arrayProductos[j].id + ">" +
 						"<img class=\"mr-3 src_imagen\" src=" + arrayProductos[j].src_imagen +" class=\"img-fluid\" alt=\"Free Template by colorlib.com\">" +
 						"<div class=\"media-body\">" +

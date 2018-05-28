@@ -66,24 +66,17 @@ public class InfoProductoServlet extends HttpServlet {
 			String valor = request.getParameter("precio");
 			String src_imagen = request.getParameter("src_imagen");
 
-			System.out.println("doPost info id:" + id);
-
-			/*
-			 * out.println("<input type=\"hidden\" name=\"idInfo\" value=" + id + ">" +
-			 * "<h1 name=\"nombre\">" + nom + "</h1>" + "<h1 name=\"descripcion\">" + desc +
-			 * "</h1>" + "<h1 name=\"valor\">" + valor + "</h1>" +
-			 * "<input type=\"number\" name=\"cantidad\" value=\"\">" +
-			 * "<a onclick=\"add()\">Añadir al carrito</a>" +
-			 * "<a href=\"index.jsp\">Volver</a>");
-			 */
-
 			out.println(" <div id=item-" + id + " class=\"item\">\n"
 					+ "<input type=\"hidden\" name=\"identificador\" value=" + id + ">"
+					+ "<div class=\"volver-container\">\n"
+					+ "		<a onclick=\"volver_a_home()\" class=\"volver-a-comprar volver\">"
+					+ "		<i class=\"fa fa-arrow-left flecha-volver\"></i> Volver a comprar</a>" + "</div>"
 					+ "            <div class=\"d-md-block media mb-4 text-center site-media site-animate  info-item\">\n"
 					+ "              <img class=\"src_imagen img-fluid imagen-producto\" style=\"max-width:100%; height:auto;\" src="
 					+ src_imagen + " alt=\"Free Template by colorlib.com\" class=\"img-fluid\">\n"
-					+ "<h5 class=\"mt-0 h4 nombre\">" + nom + "<span class=\"text-primary price-item\"><h5 class=\"precio\">" + valor
-					+ "</h5></span> </h5>" + "<p class=\"mb-4 descripcion\">" + desc + "</p>\n" + "\n"
+					+ "<h5 class=\"mt-0 h4 nombre\">" + nom
+					+ "<span class=\"text-primary price-item\"><h5 class=\"precio\">" + valor + "</h5></span> </h5>"
+					+ "<p class=\"mb-4 descripcion\">" + desc + "</p>\n" + "\n"
 					+ "								<div class=\"flex-w add-to-cart\">\n"
 					+ "									<div class=\"d-block flex-w flex-m respon6-next\">\n"
 					+ "<div class=\"add-cantidad\"> "
@@ -97,8 +90,7 @@ public class InfoProductoServlet extends HttpServlet {
 					+ "											<div class=\"btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m\" onclick=\"sumar()\">\n"
 					+ "												<i class=\"fs-16 zmdi zmdi-plus\"></i>\n"
 					+ "											</div>\n"
-					+ "										</div>" + "</div>"
-					+ "<hr/>"
+					+ "										</div>" + "</div>" + "<hr/>"
 					+ "<button class=\"col-sm-1 flex-c-m stext-101 cl0 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail btn-add\" onclick=\"add("
 					+ id + ")\">\n	A&ntilde;adir al carrito\n </button>\n"
 					+ "									</div>\n" + "								</div>"

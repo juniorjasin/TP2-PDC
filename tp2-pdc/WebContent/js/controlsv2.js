@@ -213,7 +213,7 @@ function crear_productos() {
 								"<p class=\"descripcion\">" + categoria[i].desc + "</p>" +
 								"<h6 class=\"text-primary menu-price precio\">$"+ categoria[i].precio +"</h6>" +
 							"</div>" +
-							"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span class=\"close-icon\"aria-hidden=\"true\">&times;</span></button>" +
+							"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span class=\"close-icon\" aria-hidden=\"true\">&times;</span></button>" +
 						"</div>" );
 				
 
@@ -402,7 +402,7 @@ function add(id) {
 			
 			var selectorItem = "#item-"+ id + "-menu";
 			$(selectorItem).attr("onclick","");
-			$(selectorItem).append("<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span aria-hidden=\"true\">&times;</span></button>");
+			$(selectorItem).append("<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span class=\"close-icon\" aria-hidden=\"true\">&times;</span></button>");
 		}
 	});
 	
@@ -460,6 +460,16 @@ function volver_carrito(){
 	$("#carrito").show();
 }
 
+function volver_a_home(){
+	$("#formulario").hide();
+	$("#iproducto").hide();
+	$("#carrito").hide();
+	$("#formulario").hide();
+	
+	$(".section-slide").show();
+	$("#isection-menu").show();
+}
+
 function visualizar_carrito() {
 	console.log("visualizar_carrito");
 	
@@ -488,19 +498,15 @@ function visualizar_carrito() {
 			$("#carrito").show();
 			$("#carrito").html(html);
 			
-			console.log('JSON.parse(localStorage.getItem("carrito")).length:' + JSON.parse(localStorage.getItem("carrito")).length);
+			//console.log('JSON.parse(localStorage.getItem("carrito")).length:' + JSON.parse(localStorage.getItem("carrito")).length);
 			
 			if (localStorage.getItem("carrito") == null || JSON.parse(localStorage.getItem("carrito")).length == 0) {
 				console.log('visualizar if');
-				$('#ifinalizar-compra').prop('disabled', true);
-				$('#ifinalizar-compra').removeClass('btn-primary');
-				$('#ifinalizar-compra').addClass('button-disabled');
+				$('#ifinalizar-compra').addClass('disabled');
 
 			}else{
 				console.log('visualizar else');
-			$('#ifinalizar-compra').addClass('btn-primary');
-			$('#ifinalizar-compra').removeClass('button-disabled');
-			$('#ifinalizar-compra').prop('disabled', false);
+				$('#ifinalizar-compra').removeClass('disabled');
 			}
 			
 		}
@@ -688,6 +694,12 @@ function buscarProducto(){
 	//console.log("$(#i-search).val():" + $("#i-search").val());
 	modal();
 	
+	$("#isection-menu").show();
+	$(".section-slide").show();
+	
+	$("#carrito").hide();
+	$("#formulario").hide();
+	$('#isection-producto').hide();
 	
 	var buscar = $("#i-search").val().toLowerCase();
 	console.log("buscar:" + buscar);
@@ -872,6 +884,7 @@ function buscarProducto(){
 						"</div>" +
 						"<button type=\"button\" class=\"close color-red\" aria-label=\"Close\" onclick=eliminar(this)><span class=\"close-icon\" aria-hidden=\"true\">&times;</span></button>" +
 					"</div>";
+					
 				}else{
 					elementos_encontrados += "<div id=\"item-" + arrayProductos[j].id + "-menu\" class=\"media menu-item-busqueda\" onclick=\"detallesProducto(this)\"> " +
 					"<input type= \"hidden\" name=\"identificador\" value="+ arrayProductos[j].id + ">" +

@@ -36,10 +36,11 @@ public class ResumenSessionServlet extends HttpServlet {
 
 		HttpSession session = request.getSession(true);
 
-		out.println("<div class=\"wrap-table-shopping-cart\">\n" + "    <table class=\"table-shopping-cart\">\n"
-				+ "<a href=\"index.jsp\" class=\"volver-a-comprar volver\">"
-				+ "<i class=\"fa fa-arrow-left flecha-volver\"></i> Volver a comprar</a>"
-				+ "        <tr class=\"table_head\">\n" + "            "
+		out.println("" + "<div class=\"volver-container-resumen\">\n"
+				+ "		<a onclick=\"volver_a_home()\" class=\"volver-a-comprar volver\">"
+				+ "		<i class=\"fa fa-arrow-left flecha-volver\"></i> Volver a comprar</a>" + "</div>" + "<div>"
+				+ "<div class=\"resumen-container\">" + "<div class=\"wrap-table-shopping-cart\">\n"
+				+ "    <table class=\"table-shopping-cart\">\n" + "        <tr class=\"table_head\">\n" + "            "
 				+ "            <th class=\"column-1\">Product0</th>\n"
 				+ "            <th class=\"column-2\">Precio</th>\n"
 				+ "            <th class=\"column-3\">Cantidad</th>\n"
@@ -63,18 +64,6 @@ public class ResumenSessionServlet extends HttpServlet {
 					+ miproducto.getCantidad() * miproducto.getPrecio() + "</td>\n"
 					+ "<td class=\"column-5\"><button type=\"button\" class=\"close btn-close color-red\" aria-label=\"Close\" onclick=eliminar_product_carrito(this)><span class=\"close-icon\" aria-hidden=\"true\">&times;</span></button></td></tr>");
 
-			/*
-			 * out.println("<tr>"); out.println("<td>");
-			 * out.println(miproducto.getNombre());
-			 * out.println("<input type=\"hidden\" name=\"hAttrName\" value=\"" +
-			 * miproducto.getId() + "\">"); out.println("</td>"); out.println("<td>" +
-			 * miproducto.getDescripcion() + "</td>"); out.println("<td>" +
-			 * miproducto.getCantidad() + "</td>"); out.println("<td>" +
-			 * miproducto.getPrecio() + "</td>"); out.
-			 * println("<td><a onclick=\"eliminar_product_carrito(this)\">Eliminar</a></td>"
-			 * ); out.println("</tr>"); total += miproducto.getPrecio() *
-			 * miproducto.getCantidad();
-			 */
 			total += miproducto.getPrecio() * miproducto.getCantidad();
 		}
 		out.println("</table>");
@@ -85,7 +74,7 @@ public class ResumenSessionServlet extends HttpServlet {
 		out.println("<div class=\"finalizar-compra-container\">"
 				+ "<a onclick=\"confirmarCompra()\" id=\"ifinalizar-compra\" "
 				+ "class=\"btn-finalizar-compra flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04\">Finalizar compra</a>"
-				+ "<div>");
+				+ "<div>" + "<div>");
 
 		out.close();
 	}

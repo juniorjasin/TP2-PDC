@@ -57,59 +57,34 @@ public class FinalizarCompraServlet extends HttpServlet {
 				}
 			}
 		}
-		
-		out.println(""
-				+ "<a onclick=\"volver_carrito()\" class=\"volver\">"
+
+		out.println("" + "<a onclick=\"volver_carrito()\" class=\"volver\">"
 				+ "<i class=\"fa fa-arrow-left flecha-volver\"></i> Volver al carrito</a>"
-				+ "<div class=\"section-form\">"
-				+ "<div class=\"col-sm-16 col-lg-16 p-b-50\">\n" + 
-				"    <h4 class=\"stext-301 cl10 p-b-30\">Ingrese sus datos</h4>\n" + 
-				"\n" + 
-				"    <form id=\"iform-confirmar\" action=\"javascript:void(null)\" onsubmit=\"procesarCompra(event)\">\n" + 
-				"\n" + 
-				"        <div class=\"col-lg-6 wrap-input1 w-full p-b-4 fc-inombre\">\n" + 
-				"            <input id=\"inombre\" class=\"input1 bg-none plh1 stext-107\" type=\"text\" name=\"nombre\" placeholder=\"Ingrese su nombre\" required value=" + nombre +">\n" + 
-				"            <div class=\"focus-input1 trans-04\"></div>\n" + 
-				"        </div>\n" + 
-				"        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4 fc-iapellido\">\n" + 
-				"            <input id=\"iapellido\" class=\"input1 bg-none plh1 stext-107\" type=\"text\" name=\"apellido\" placeholder=\"Ingrese su apellido\" required value=" + apellido + ">\n" + 
-				"            <div class=\"focus-input1 trans-04\"></div>\n" + 
-				"        </div>\n" + 
-				"        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4 fc-idirpostal\">\n" + 
-				"                <input id=\"idirpostal\" class=\"input1 bg-none plh1 stext-107\" type=\"text\" name=\"dirPostal\" placeholder=\"Ingrese su direccion postal\" required value=" + dirPostal + ">\n" + 
-				"                <div class=\"focus-input1 trans-04\"></div>\n" + 
-				"            </div>\n" + 
-				"        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4 fc-imail\">\n" + 
-				"            <input id=\"imail\" class=\"input1 bg-none plh1 stext-107\" type=\"email\" name=\"email\" placeholder=\"email@example.com\" required value=" + mail + ">\n" + 
-				"            <div class=\"focus-input1 trans-04\"></div>\n" + 
-				"        </div>\n" + 
-				"\n" + 
-				"        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4\">\n" + 
-				"            <input id=\"irecordar\" type=\"checkbox\" name=\"recordar\" checked>\n" +
-				"            <label class=\"lab-recordar\" for=\"irecordar\"> Recordar datos?  </label>" +
-				"            <div class=\"focus-input1 trans-04\"></div>" + 
-				"        </div>\n" +
-				"        <div class=\"p-t-18 btn-confirmar-compra-container\">\n" + 
-				"            <button type=\"submit\" name=\"button\" id=\"ibutton\" class=\"btn-finalizar-compra flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04 btn-primary\">\n" + 
-				"                Confirmar pedido</button>\n" + 
-				"        </div>\n" +
-				"    </form>\n" + 
-				"</div>"
+				+ "<div class=\"section-form\">" + "<div class=\"col-sm-16 col-lg-16 p-b-50\">\n"
+				+ "    <h4 class=\"stext-301 cl10 p-b-30\">Ingrese sus datos</h4>\n" + "\n"
+				+ "    <form id=\"iform-confirmar\" action=\"javascript:void(null)\" onsubmit=\"procesarCompra(event)\">\n"
+				+ "\n" + "        <div class=\"col-lg-6 wrap-input1 w-full p-b-4 fc-inombre\">\n"
+				+ "            <input id=\"inombre\" class=\"input1 bg-none plh1 stext-107\" type=\"text\" name=\"nombre\" placeholder=\"Ingrese su nombre\" required value="
+				+ nombre + ">\n" + "            <div class=\"focus-input1 trans-04\"></div>\n" + "        </div>\n"
+				+ "        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4 fc-iapellido\">\n"
+				+ "            <input id=\"iapellido\" class=\"input1 bg-none plh1 stext-107\" type=\"text\" name=\"apellido\" placeholder=\"Ingrese su apellido\" required value="
+				+ apellido + ">\n" + "            <div class=\"focus-input1 trans-04\"></div>\n" + "        </div>\n"
+				+ "        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4 fc-idirpostal\">\n"
+				+ "                <input id=\"idirpostal\" class=\"input1 bg-none plh1 stext-107\" type=\"text\" name=\"dirPostal\" placeholder=\"Ingrese su direccion postal\" required value="
+				+ dirPostal + ">\n" + "                <div class=\"focus-input1 trans-04\"></div>\n"
+				+ "            </div>\n"
+				+ "        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4 fc-imail\">\n"
+				+ "            <input id=\"imail\" class=\"input1 bg-none plh1 stext-107\" type=\"email\" name=\"email\" placeholder=\"email@example.com\" required value="
+				+ mail + ">\n" + "            <div class=\"focus-input1 trans-04\"></div>\n" + "        </div>\n" + "\n"
+				+ "        <div class=\"col-sm-6 col-lg-6 wrap-input1 w-full p-b-4\">\n"
+				+ "            <input id=\"irecordar\" type=\"checkbox\" name=\"recordar\" checked>\n"
+				+ "            <label class=\"lab-recordar\" for=\"irecordar\"> Recordar datos?  </label>"
+				+ "            <div class=\"focus-input1 trans-04\"></div>" + "        </div>\n"
+				+ "        <div class=\"p-t-18 btn-confirmar-compra-container\">\n"
+				+ "            <button type=\"submit\" name=\"button\" id=\"ibutton\" class=\"btn-finalizar-compra flex-c-m stext-101 size-101 bg10 bor1 hov-btn1 p-lr-15 trans-04 btn-primary\">\n"
+				+ "                Confirmar pedido</button>\n" + "        </div>\n" + "    </form>\n" + "</div>"
 				+ "</div>");
 		out.close();
-		
-
-/*		out.println("<form action=\"javascript:void(null)\" onsubmit=\"procesarCompra(event)\">");
-		out.println("<label>Nombre:<input id=\"inombre\" type=\"text\" name=\"nombre\" value=" + nombre + " ></label>");
-		out.println("<label>Apellido:<input id=\"iapellido\" type=\"text\" name=\"apellido\" value=" + apellido
-				+ " ></label>");
-		out.println("<label>mail:<input id=\"imail\" type=\"text\" name=\"mail\" value=" + mail + "></label>");
-		out.println(
-				"<label> Recordar datos? <input id=\"irecordar\" type=\"checkbox\" name=\"recordar\" checked></label>");
-		out.println("<button type=\"submit\" name=\"button\" id=\"ibutton\"> Confirmar pedido </button>");
-		out.println("</form>");
-		out.close();
-*/
 	}
 
 	/**
@@ -131,7 +106,7 @@ public class FinalizarCompraServlet extends HttpServlet {
 			String apellido = request.getParameter("apellido");
 			String mail = request.getParameter("mail");
 			String dirPostal = request.getParameter("dirPostal");
-			
+
 			System.out.println("dirPostal: " + dirPostal);
 
 			Cookie cooknombre = new Cookie("cnombre", nombre); // hacer constante el nombre de las cookies
@@ -143,21 +118,6 @@ public class FinalizarCompraServlet extends HttpServlet {
 			response.addCookie(cookapellido);
 			response.addCookie(cookmail);
 			response.addCookie(cookdirPostal);
-
-			// if (cookies != null) {
-			// for (Cookie c : cookies) {
-			// System.out.println("cookie name:" + c.getName());
-			// System.out.println("cookie value:" + c.getValue());
-			// c = new Cookie(c.getName(), "");
-			// c.setMaxAge(0);
-			// response.addCookie(c);
-			//
-			// }
-			// }
-			// String value = nombre + apellido + mail;
-			// System.out.println(value);
-			// Cookie co = new Cookie("JSESSIONID", "");
-			// response.addCookie(co);
 
 		} else {
 

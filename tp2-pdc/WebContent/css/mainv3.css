@@ -105,7 +105,8 @@ SECCION MENU - SECCION MENU - SECCION MENU - SECCION MENU - SECCION
 	border-top: 1px solid #ccc;
     border-radius: 25px;
     
-	height: 30%;
+    height: 13em;
+    margin-left: 5%;
 	
 	transition: all 0.3s ease-in-out;
 	overflow: auto;
@@ -116,7 +117,7 @@ SECCION MENU - SECCION MENU - SECCION MENU - SECCION MENU - SECCION
 }
 
 .menu-item-busqueda img {
-	width: 200px;
+	width: 15em;
 	height: 100%;
 	
 	border-top: 1px solid #ccc;
@@ -131,6 +132,7 @@ SECCION MENU - SECCION MENU - SECCION MENU - SECCION MENU - SECCION
 	color: #000;
 	font-weight: 400;
 	text-align: right;
+	margin-right: 1em;
 }
 
 
@@ -173,6 +175,9 @@ SECCION MENU - SECCION MENU - SECCION MENU - SECCION MENU - SECCION
 	text-align: right;
 }
 
+.menu-price{
+	margin-right: 0.5em;
+}
 
 
 
@@ -2156,8 +2161,6 @@ input.num-product::-webkit-outer-spin-button, input.num-product::-webkit-inner-s
 	overflow: auto;
 	border-left: 1px solid #e6e6e6;
 	border-right: 1px solid #e6e6e6;
-	
-	margin-top: 10em;
 }
 
 .table-shopping-cart {
